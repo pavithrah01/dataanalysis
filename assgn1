@@ -1,0 +1,13 @@
+import pandas as pd
+
+def calculate_surcharge(ship_mode):
+    if ship_mode == "Same Day":
+        return 0.2
+    elif ship_mode == "First Class":
+        return 0.1
+    elif ship_mode == "Standard Class":
+        return 0.05
+    else:
+        return 0
+
+data['surcharge'] = data['ship_mode'].apply(calculate_surcharge)
